@@ -38,3 +38,38 @@ backToTopBtn.addEventListener("click", function() {
         behavior: "smooth"
     });
 });
+
+const modal = document.getElementById("projectModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentImages = [];
+let currentIndex = 0;
+
+// Open modal with images
+document.querySelectorAll(".view-project").forEach(button => {
+    button.addEventListener("click", e => {
+        e.preventDefault();
+        currentImages = button.dataset.images.split(",");
+        currentIndex = 0;
+        modal.style.display = "flex";
+        modalImg.src = currentImages[currentIndex];
+    });
+});
+
+// Close modal
+closeBtn.onclick = () => modal.style.display = "none";
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; }
+
+// Navigation
+nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    modalImg.src = currentImages[currentIndex];
+};
+
+prevBtn.onclick = () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    modalImg.src = currentImages[currentIndex];
+};
