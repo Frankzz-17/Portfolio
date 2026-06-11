@@ -6,7 +6,7 @@ const projectsData = {
     'santelmo': {
         title: 'SANTELMO',
         description: 'A story driven, Bicol myth inspired game created for a game jam. It focuses on the player\'s role as Santelmo, guiding and protecting a lost villager through the dark woods.',
-        video: YOUTUBE_EMBED_URL,
+        video: 'https://youtube.com/embed/vHC7yMLm9dY',
         screenshots: ['image/santelmo5.png', 'image/santelmo1.jpg', 'image/santelmo2.jpg', 'image/santelmo3.jpg', 'image/santelmo4.jpg'],
         role: 'Game Developer',
         tools: 'Unity, C#, Blender',
@@ -17,7 +17,7 @@ const projectsData = {
     'road-ready': {
         title: 'Road Ready',
         description: 'Road Ready is a 3D driving game set in Naga City where players learn road safety by following real traffic signs. The player must follow every road sign they encounter to successfully complete the level.',
-        video: YOUTUBE_EMBED_URL,
+        video: 'https://youtube.com/embed/NSG2fz9yHH8',
         screenshots: ['image/road4.png', 'image/road3.png', 'image/road1.png', 'image/road2.png'],
         role: '3D Modeler',
         tools: 'Unity, C#, Maya, Blender, Substance Painter, Photoshop',
@@ -28,13 +28,13 @@ const projectsData = {
     'dont-get-fooled': {
         title: "Don't Get Fooled",
         description: 'A 2D platformer game where you play as a rabbit that is lost in a cave full of traps. Navigate through dangerous obstacles and find your way out.',
-        video: YOUTUBE_EMBED_URL,
+        video: 'https://youtube.com/embed/ms88Q2n1ci4',
         screenshots: ['image/dont1.jpg', 'image/dont2.jpg', 'image/dont3.jpg', 'image/dont4.jpg'],
         role: 'Developer & Designer',
         tools: 'Unity, C#, Aseprite',
         platform: 'PC',
         date: 'Feb 10, 2024',
-        bgImage: 'image/Don\'t Get Fooled.png'
+        bgImage: 'image/Dont Get Fooled.png'
     },
     'lume': {
         title: 'Lume',
@@ -50,7 +50,7 @@ const projectsData = {
     'allen-denz': {
         title: 'Allen and Denz Quest',
         description: 'Allen and Denz Quest is a 2D puzzle platformer game with a full of traps. Work together with your partner to overcome challenges and complete the adventure.',
-        video: YOUTUBE_EMBED_URL,
+        video:'https://youtube.com/embed/Zt8Ldc3206c',
         screenshots: ['image/a1.png', 'image/a2.png', 'image/a3.png'],
         role: 'Game Developer',
         tools: 'Unity, C#',
