@@ -8,21 +8,33 @@
     --card-bg: #1a1a1a;
     --accent-color: oklch(71.629% 0.16479 240.252);
     --text-color: #e9e9e9;
+    --project-bg-image: url('image/default.jpg');
+}
+
+/* Enable smooth scrolling for entire page */
+html {
+    scroll-behavior: smooth;
 }
 
 /* --- About Me Section --- */
 #about {
     background-color: var(--bg-about);
-    padding: 120px 10%;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
 }
 
 .about-wrapper {
-    max-width: 1100px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
     align-items: center;
+    justify-items: center;
 }
 
 .about-image-container {
@@ -33,13 +45,14 @@
 
 .about-image {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 350px;
     border-radius: 20px;
     overflow: hidden;
-    border: 2px solid #ffffff;
+    border: 3px solid #ffffff;
     
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -221,12 +234,14 @@ nav ul {
 /* --- SECTION SEPARATION --- */
 
 header#home {
-    padding-top: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; /* Ensures your text is visible */
+    color: white;
 }
 
 header#home img {
@@ -234,12 +249,6 @@ header#home img {
     height: auto;          /* Keeps the logo from looking stretched */
     max-width: 80%;       /* Ensures it doesn't overflow on small phone screens */
     filter: drop-shadow(0 0 20px rgba(0,0,0,0.5)); /* Optional: makes logo pop against background */
-}
-
-#about {
-    background-color: var(--bg-about);
-    padding: 100px 10%;
-    text-align: center;
 }
 
 #education {
@@ -276,7 +285,7 @@ header#home img {
 #projects {
     /* Use a dark gradient overlay so the text remains readable */
     background: #161616;
-    padding: 100px 10%;
+    padding: 80px 10%;
     position: relative;
 }
 
@@ -303,7 +312,7 @@ header#home img {
 /* --- Education Section --- */
 #education {
     background: #161616;
-    padding: 50px;
+    padding: 90px;
     position: relative;
 }
 
@@ -586,7 +595,7 @@ h2 {
 .time-header { color: var(--accent-color); font-weight: bold; margin-bottom: 10px; }
 .degree { color: #aaa; min-height: 3em; }
 .dot-line { display: flex; align-items: center; margin: 15px 0; }
-.dot { width: 12px; height: 12px; background: var(--accent-color); border-radius: 50%; }
+.dot { width: 12px; height: 12px; background: var(--accent-color); border-radius: 8px; }
 .line { height: 1px; background: #444; width: 100%; }
 .timeline-item:last-child .line { display: none; }
 
@@ -667,7 +676,7 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     color: black; 
     cursor: pointer; 
     padding: 15px; 
-    border-radius: 50%; 
+    border-radius: 8px; 
     font-size: 1.2rem;
     width: 50px;
     height: 50px;
@@ -701,7 +710,7 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('image/road1.png') center/cover no-repeat;
+    background: var(--project-bg-image) center/cover no-repeat;
     background-attachment: fixed;
     filter: blur(15px);
     opacity: 0.2;
@@ -717,8 +726,8 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     top: 30px;
     left: 30px;
     background:#161616;
-    color: #ff3281;
-    border: 2px solid #ff3281;
+    color: white;
+    border: 2px solid white;
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 1.5rem;
@@ -841,7 +850,7 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
 
 /* Screenshots Section */
 .project-screenshots-section {
-    margin-bottom: 80px;
+    margin-bottom: 150px;
 }
 
 .project-screenshots-section h3 {
@@ -856,7 +865,7 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .screenshot-item {
@@ -908,6 +917,7 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     width: 100%;
     display: block;
     background: #000;
+    aspect-ratio: 16 / 9;
 }
 
 /* Next Project Button */
@@ -971,33 +981,57 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
 
 .close {
     position: absolute;
-    top: 30px;
-    right: 40px;
+    top: -50px;
+    right: -50px;
     color: white;
-    font-size: 40px;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: 0.3s;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 15px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgba(255,255,255,0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 100001;
 }
 
 .close:hover {
-    color: var(--accent-color);
-    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    background: #ff3281;
+    border-color: #ff3281;
+    transform: scale(1.1);
+}
+
+/* Modal image wrapper — keeps arrows flush beside the image */
+.modal-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Relative container so the X button anchors to the image corner */
+.modal-img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Modal Navigation Buttons */
 .modal-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(87, 233, 255, 0.2);
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1.5rem;
     display: flex;
@@ -1008,18 +1042,11 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
 }
 
 .modal-nav-btn:hover {
-    background: var(--accent-color);
-    color: black;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 20px rgba(87, 233, 255, 0.6);
-}
-
-.modal-prev {
-    left: 30px;
-}
-
-.modal-next {
-    right: 30px;
+    background: #ff3281;
+    color: white;
+    border-color: #ff3281;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 50, 129, 0.6);
 }
 
 /* Responsive */
@@ -1094,14 +1121,6 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
         font-size: 30px;
     }
 
-    .modal-prev {
-        left: 15px;
-    }
-
-    .modal-next {
-        right: 15px;
-    }
-
     .modal-nav-btn {
         width: 40px;
         height: 40px;
@@ -1124,6 +1143,10 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     overflow-y: auto;
 }
 
+.modal.show {
+    display: flex !important;
+}
+
 .modal-content-wrapper {
     width: 100%;
     max-width: 1000px;
@@ -1131,6 +1154,7 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    position: relative;
 }
 
 #modalVideo {
@@ -1225,21 +1249,29 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
 
 .close {
     position: absolute;
-    top: 30px;
-    right: 40px;
+    top: -70px;
+    right: -70px;
     color: white;
-    font-size: 40px;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: 0.3s;
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 15px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgba(255,255,255,0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 100001;
 }
 
 .close:hover {
-    color: var(--accent-color);
-    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    background: #ff3281;
+    border-color: #ff3281;
+    transform: scale(1.1);
 }
 
 .prev, .next {
@@ -1261,10 +1293,11 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     }
 
     .close {
-        top: 15px;
-        right: 15px;
-        font-size: 30px;
-        padding: 8px 12px;
+        top: -30px;
+        right: -30px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 
     .thumbnail {
