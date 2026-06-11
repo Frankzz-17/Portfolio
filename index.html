@@ -19,7 +19,7 @@
         <ul>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#education">EDUCATION.</a></li>
+            <li><a href="#education">EDUCATION</a></li>
             <li><a href="#experience">EXPERIENCE</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
@@ -150,7 +150,7 @@
     <section id="contact">
         <h2>CONTACT ME</h2>
         <div class="contact-container">
-            <p>Let's collaborate! Reach out to me via the form below or through my social channels.</p>
+            <p>Let's collaborate! Reach out to me via my social channels.</p>
            
             <div class="social-links">
                 <a href="https://www.facebook.com/Franz.Manrique17" target="_blank" aria-label="Facebook">
@@ -209,7 +209,12 @@
       <div class="project-gameplay-section">
         <h3>Gameplay</h3>
         <div class="gameplay-video-wrapper">
-          <video id="projectVideo" class="gameplay-video" controls></video>
+          <iframe id="projectVideo" class="gameplay-video" 
+              title="Project Gameplay"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+          </iframe>
         </div>
       </div>
       
@@ -223,10 +228,20 @@
 
   <!-- Image Modal for Screenshot Zoom -->
   <div id="projectModal" class="modal">
-    <span class="close">&times;</span>
-    <img id="modalImage" class="modal-content">
-</div>
+    <div class="modal-image-wrapper">
+      <button class="modal-nav-btn modal-prev" id="modalPrev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="modal-img-container">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-content">
+      </div>
+      <button class="modal-nav-btn modal-next" id="modalNext">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
