@@ -6,7 +6,7 @@ const projectsData = {
     'santelmo': {
         title: 'SANTELMO',
         description: 'A story driven, Bicol myth inspired game created for a game jam. It focuses on the player\'s role as Santelmo, guiding and protecting a lost villager through the dark woods.',
-        video: 'https://youtube.com/embed/vHC7yMLm9dY',
+        video: 'https://www.youtube.com/embed/vHC7yMLm9dY',
         screenshots: ['image/santelmo5.png', 'image/santelmo1.jpg', 'image/santelmo2.jpg', 'image/santelmo3.jpg', 'image/santelmo4.jpg'],
         role: 'Game Developer',
         tools: 'Unity, C#, Blender',
@@ -17,7 +17,7 @@ const projectsData = {
     'road-ready': {
         title: 'Road Ready',
         description: 'Road Ready is a 3D driving game set in Naga City where players learn road safety by following real traffic signs. The player must follow every road sign they encounter to successfully complete the level.',
-        video: 'https://youtube.com/embed/NSG2fz9yHH8',
+        video: 'https://www.youtube.com/embed/NSG2fz9yHH8',
         screenshots: ['image/road4.png', 'image/road3.png', 'image/road1.png', 'image/road2.png'],
         role: '3D Modeler',
         tools: 'Unity, C#, Maya, Blender, Substance Painter, Photoshop',
@@ -28,7 +28,7 @@ const projectsData = {
     'dont-get-fooled': {
         title: "Don't Get Fooled",
         description: 'A 2D platformer game where you play as a rabbit that is lost in a cave full of traps. Navigate through dangerous obstacles and find your way out.',
-        video: 'https://youtube.com/embed/ms88Q2n1ci4',
+        video: 'https://www.youtube.com/embed/ms88Q2n1ci4',
         screenshots: ['image/dont1.jpg', 'image/dont2.jpg', 'image/dont3.jpg', 'image/dont4.jpg'],
         role: 'Developer & Designer',
         tools: 'Unity, C#, Aseprite',
@@ -39,7 +39,7 @@ const projectsData = {
     'lume': {
         title: 'Lume',
         description: 'Lume is a 3D platformer where you solve puzzles, overcome obstacles, and explore a mysterious world to complete your adventure.',
-        video: YOUTUBE_EMBED_URL,
+        video: 'https://www.youtube.com/embed/WOs-jrkWj1M',
         screenshots: ['image/l1.png', 'image/l2.png'],
         role: 'Programmer',
         tools: 'Unity, C#, Blender',
@@ -68,6 +68,17 @@ const projectsData = {
         platform: 'PC',
         date: 'Dec 5, 2023',
         bgImage: 'image/b1.png'
+    },
+    'lost': {
+        title: "Lost",
+        description: 'Lost is a 3D stealth puzzle-platformer where you control a small cube with a limited spotlight, exploring a world consumed by darkness. Collect glowing orbs to expand your vision, evade the Watchers of the Void with their unique behaviors, and find the portal to escape.',
+        video:'https://www.youtube.com/embed/poXfi9KYaZQ',
+        screenshots: ['image/lost1.png', 'image/lost2.png', 'image/lost3.png', 'image/lost4.png', 'image/lost5.png', 'image/lost6.png', 'image/lost7.png'],
+        role: 'Developer',
+        tools: 'Unity, Maya, C#',
+        platform: 'PC',
+        date: 'June 8, 2025',
+        bgImage: 'image/lost1.png'
     }
 };
 
